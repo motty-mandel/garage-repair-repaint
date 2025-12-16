@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Garage Door Champions | San Antonio Garage Door Repainting Specialists</title>
+  <meta name="description" content="San Antonio’s trusted garage door repainting specialists — premium prep, UV-resistant finishes, and lasting protection.">
+  <meta property="og:title" content="Garage Door Champions — San Antonio" />
+  <meta property="og:description" content="Repair • Repaint • Springs • Openers • Tune-ups. Same-day estimates." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Garage+Door+Champions" />
+  <meta name="theme-color" content="#0B1E33">
+
+  <!-- Brand fonts (optional Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --blue:#0B1E33; /* Deep navy for primary text/links */
+      --blue-700:#0f2a47;
+      --red:#8B1E3F; /* Rich maroon/red for accents and "Champions" feel */
+      --red-600:#a0264a;
+      --cream:#f8f5f0; /* Off-white/cream for backgrounds */
+      --bg:#f8f8f5;
+      --ink:#1a1d22;
+      --muted:#5d6a7a;
+      --success:#1fb77a;
+      --danger:#d33a2c;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--blue);text-decoration:none}
+    .container{width:min(1100px,92vw);margin-inline:auto}
+    .btn{display:inline-flex;gap:.6rem;align-items:center;padding:.9rem 1.2rem;border-radius:12px;font-weight:700;border:2px solid transparent;cursor:pointer;transition:.2s}
+    .btn.primary{background:var(--red);color:#ffffff}
+    .btn.primary:hover{background:var(--red-600)}
+    .btn.outline{border-color:var(--red);color:var(--red);background:transparent}
+    .btn.outline:hover{background:#fdf2f4}
+    header{
+      position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid #ececec;
+      backdrop-filter:saturate(180%) blur(6px)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+    .brand{display:flex;gap:.8rem;align-items:center}
+    .brand-svg{width:64px;height:64px;max-width:64px;max-height:64px;transition:width .15s ease,height .15s ease}
+    .brand h1{font-size:1.05rem;margin:0;line-height:1.1}
+    .brand small{display:block;color:var(--muted);font-weight:600}
+    .nav .cta{display:flex;gap:.6rem;align-items:center}
+    .phone{font-weight:800;color:var(--blue)}
+    .hero{
+      background: radial-gradient(1200px 600px at 15% 0%, #1a3557 0%, var(--blue) 40%, #05182e 100%);
+      color:#fff; padding:72px 0;
+      position:relative; overflow:hidden;
+    }
+    .hero:after{
+      content:""; position:absolute; inset:auto -10% -30% -10%;
+      z-index:0;
+      height:280px; background:
+      radial-gradient(600px 200px at 40% 0%, rgba(139,30,63,.25), transparent 70%),
+      radial-gradient(600px 200px at 80% 20%, rgba(255,255,255,.08), transparent 70%);
+      transform:skewY(-6deg);
+    }
+    .hero-inner{display:grid;grid-template-columns:1.2fr .9fr;gap:36px;align-items:center;position:relative;z-index:1}
+    .hero h2{font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.2rem 0 0}
+    .hero p{color:#e0e8f5;max-width:52ch}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:.6rem 0 1.1rem}
+    .badge{display:inline-flex;align-items:center;background:#152940;border:1px solid #2a4a70;padding:.35rem .6rem;border-radius:999px;font-weight:700;color:#d0e0ff;font-size:.85rem}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #ececec}
+    form.card{padding:18px}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:1fr 1fr}
+    label{font-size:.9rem;font-weight:600;margin-bottom:.25rem;color:var(--blue)}
+    .field{display:flex;flex-direction:column;gap:.4rem}
+    input,select,textarea{
+      padding:.85rem .9rem;border:1.5px solid #e5e7eb;border-radius:12px;background:#fff;font:inherit;outline:none
+    }
+    input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(139,30,63,.2)}
+    .hero-form h3{margin:0 0 .4rem}
+    .hero-form small{color:var(--muted)}
+    .section{padding:62px 0}
+    .section h3{font-size:1.6rem;margin:0 0 .6rem;color:var(--blue)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{padding:20px}
+    .feature.card{position:relative}
+    .ribbon{position:absolute;top:12px;right:12px;background:var(--red);color:#fff;padding:.25rem .6rem;border-radius:8px;font-weight:800;font-size:.85rem;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+    .feature .price{margin-top:.6rem;font-weight:800;color:var(--red);font-size:1rem}
+    .feature .duration{display:block;color:var(--muted);font-weight:600;margin-top:.15rem}
+    .feature h4{margin:.2rem 0 .2rem}
+    .feature p{color:#4b5563}
+    .pill{display:inline-flex;gap:.5rem;align-items:center;font-weight:700;color:var(--blue);background:#e6edf5;border-radius:999px;padding:.35rem .7rem}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery img{width:100%;height:210px;object-fit:cover;border-radius:12px;border:1px solid #eee}
+    .cta-band{background:linear-gradient(90deg,var(--red),#b0355a);padding:24px;border-radius:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;color:#fff}
+    .cta-band p{margin:0;font-weight:700;color:#ffffff}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .review{padding:18px;border:1px solid #eee;border-radius:14px;background:#fff}
+    .review .stars{color:#c41230;font-size:1.05rem} /* Red stars for patriotic touch */
+    .faqs details{background:#fff;border:1px solid #eee;border-radius:12px;padding:14px}
+    .faqs summary{cursor:pointer;font-weight:700;color:var(--blue)}
+    .footer{background:#0f1420;color:#bfc7d4;padding:36px 0;margin-top:36px}
+    .footer a{color:#dee6f3}
+    .inline{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .sticky-call{
+      position:fixed;right:18px;bottom:18px;z-index:50;background:#fff;border:2px solid var(--red);
+      box-shadow:var(--shadow);border-radius:999px;display:flex;gap:10px;align-items:center;padding:.6rem .9rem
+    }
+    .sticky-call .btn{padding:.55rem .9rem}
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .features,.reviews,.gallery{grid-template-columns:1fr 1fr}
+      .two{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .brand-svg{width:44px;height:44px;max-width:44px;max-height:44px}
+      .reviews,.gallery{grid-template-columns:1fr}
+      .nav .cta{display:none}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img class="brand-svg" src="garage-door-repaint.jpeg" alt="Garage Door Champions Logo">
+      <div>
+        <h1>Garage Door Champions</h1>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="pill" href="tel:+12105550123" aria-label="Call Garage Door Champions">
+        📞 <span class="phone">(210) 555-0123</span>
+      </a>
+      <a class="btn outline" href="#quote">Get a Free Quote</a>
+      <a class="btn primary" href="#book">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- Rest of the body remains the same as your original code -->
+<section class="hero">
+    <div class="container hero-inner">
+    <div>
+      <h2>Repaint. Restore. Protect.<br/>San Antonio’s Garage Door Repainting Specialists.</h2>
+      <p>We specialize in premium garage door repainting and refinishing: professional prep, corrosion prevention, UV-resistant coatings, and color-matched finishes built for Texas sun.</p>
+      <p style="margin-top:.6rem;max-width:56ch;color:#e8f1ff">Repainting is a smart, cost-effective alternative to replacing your door — it refreshes curb appeal at a fraction of the cost, preserves the existing frame and hardware, reduces waste, and lets you choose upgraded protective coatings (UV blockers, rust inhibitors and durable topcoats) without the disruption of a full replacement.</p>
+      <div class="inline" style="margin-top:.8rem;">
+        <a class="btn primary" href="#quote">Get My Free Quote</a>
+        <a class="btn outline" href="#services">See Services</a>
+      </div>
+    </div>
+
+    <form id="quote" class="card hero-form" aria-labelledby="quote-title">
+      <h3 id="quote-title">Fast Quote</h3>
+      <small>We’ll text you back within minutes during business hours.</small>
+      <div class="grid two" style="margin-top:12px">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" autocomplete="name" required placeholder="Jane Doe">
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="(210) 555-0123">
+        </div>
+        <div class="field">
+          <label for="zip">ZIP (San Antonio area)</label>
+          <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" required placeholder="782xx">
+        </div>
+        <div class="field">
+          <label for="service">Service needed</label>
+          <select id="service" name="service" required>
+            <option value="">Choose…</option>
+            <option>Repainting (metal/wood/fiberglass)</option>
+            <option>Broken spring</option>
+            <option>Opener repair/replace</option>
+            <option>Cable/roller/track</option>
+            <option>Tune-up & noise fix</option>
+          </select>
+        </div>
+        <div class="field" style="grid-column:1/-1">
+          <label for="details">Details (optional)</label>
+          <textarea id="details" name="details" rows="3" placeholder="Tell us about the door, color, issues, photos link, etc."></textarea>
+        </div>
+      </div>
+      <div class="inline" style="justify-content:space-between;margin-top:6px">
+        <label class="inline" style="gap:.5rem"><input type="checkbox" id="sms" checked> Text me updates</label>
+        <button class="btn primary" type="submit">Get Free Quote →</button>
+      </div>
+      <p id="formMsg" role="status" style="margin:.6rem 0 0;font-weight:700;"></p>
+    </form>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="container">
+    <h3>Professional Services</h3>
+    <div class="features">
+      <div class="feature card">
+        <div class="pill">Package 1 • Basic</div>
+        <h4>Prep, Prime, Two-Coat Finish</h4>
+        <p>Complete surface prep (clean, degrease, light sanding), corrosion spot repair, primer, and two coats of premium exterior paint. Includes basic lubrication and inspection.</p>
+        <div class="price">$659</div>
+      </div>
+      <div class="feature card">
+        <div class="pill">Package 2 • Premium</div>
+        <h4>Everything in Package 1 + Systems</h4>
+        <p>All Repaint & Maintenance items plus inspection and adjustment of torsion hardware, drums, shaft, and cable seating. Small hardware replacements included (if needed).</p>
+        <div class="price">$975</div>
+      </div>
+      <div class="feature card">
+        <div class="ribbon">Most Popular</div>
+        <div class="pill">Package 3 • Premium plus</div>
+        <h4>Most Popular — Full Refinish + Motor</h4>
+        <p>All Basic Plus benefits plus optional opener/motor replacement or upgrade, battery backup setup, and final system tuning for quiet, reliable operation.</p>
+        <div class="price">$1475</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band">
+      <p>Get a same-day estimate — most repaints finished in just one visit.</p>
+      <div class="inline">
+        <a class="btn outline" href="tel:+12105550123">Call (210) 555-0123</a>
+        <a class="btn primary" href="#quote">Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h3>Before & After</h3>
+    <div class="gallery">
+      <img alt="Before and after repainting — dark to slate blue" src="https://images.unsplash.com/photo-1588854337221-4t?auto=format&fit=crop&w=1000&q=60">
+      <img alt="Garage door repaint to modern charcoal" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1000&q=60">
+      <img alt="Fresh white repaint on wood panel door" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1000&q=60">
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section">
+  <div class="container">
+    <h3>What Your Neighbors Say</h3>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“They repainted our sun-faded door and it looks factory new. Showed up on time and cleaned everything.”</p>
+        <strong>— Laura M., Alamo Heights</strong>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Broken spring at 8am, working by lunch. Tech explained everything and the new opener is so quiet.”</p>
+        <strong>— David P., Stone Oak</strong>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Professional, fair price, and the color match is perfect. Highly recommend.”</p>
+        <strong>— Nia R., Helotes</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h3>Serving Greater San Antonio</h3>
+    <p class="inline">We cover: Downtown • Alamo Heights • Stone Oak • Helotes • Leon Valley • Castle Hills • Converse • Live Oak • Shavano Park • Boerne • New Braunfels</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container faqs grid" style="gap:12px">
+    <h3 style="grid-column:1/-1">FAQs</h3>
+    <details>
+      <summary>How long does a repaint take?</summary>
+      <p>Most single doors: 3–5 hours including prep. Double doors: 5–7 hours. We recommend 24 hours cure time before frequent use.</p>
+    </details>
+    <details>
+      <summary>What paints do you use?</summary>
+      <p>Premium exterior acrylic/urethane systems with UV blockers, matched to the door material (metal, wood, fiberglass). We can custom color match.</p>
+    </details>
+    <details>
+      <summary>Do you offer warranties?</summary>
+      <p>Yes. 5-year paint warranty against peeling/fading and 1-3 years on parts depending on manufacturer.</p>
+    </details>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:grid;gap:12px">
+    <div class="inline" style="justify-content:space-between;flex-wrap:wrap">
+      <div>© <span id="yr"></span> Garage Door Champions • San Antonio, TX</div>
+      <div class="inline">
+        <a href="#quote">Free Quote</a> •
+        <a href="tel:+12105550123">Call (210) 555-0123</a> •
+        <a href="mailto:hello@garagedoorchampions.com">hello@garagedoorchampions.com</a>
+      </div>
+    </div>
+    <small>Licensed & insured. ROC/Contractor #000000 (placeholder).</small>
+  </div>
+</footer>
+
+<div class="sticky-call" aria-hidden="false">
+  <strong>Need help now?</strong>
+  <a class="btn primary" href="tel:+12105550123">Call (210) 555-0123</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const form = document.querySelector('form#quote');
+  const msg = document.getElementById('formMsg');
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    if(!data.name || !data.phone || !/^\d{5}$/.test(data.zip||"")){
+      msg.textContent = "Please enter your name, phone, and a valid 5-digit ZIP.";
+      msg.style.color = "var(--danger)";
+      return;
+    }
+    msg.textContent = "Thanks! We received your request and will text you shortly.";
+    msg.style.color = "var(--success)";
+    form.reset();
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}); }
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"Garage Door Champions",
+  "image":"https://via.placeholder.com/1200x630.png?text=Garage+Door+Champions",
+  "telephone":"+1-210-555-0123",
+  "areaServed":"San Antonio, TX",
+  "url":"https://example.com/",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"San Antonio",
+    "addressRegion":"TX",
+    "postalCode":"78201",
+    "addressCountry":"US"
+  },
+  "description":"Garage door repair and repainting services in San Antonio, Texas. Springs, openers, rollers, tracks, and premium refinishing.",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:30","closes":"18:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"08:00","closes":"16:00"}
+  ]
+}
+</script>
+
+</body>
+</html>
